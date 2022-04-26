@@ -12,16 +12,20 @@ import { MessageBusService, MessageType } from './message-bus.service';
 @Injectable()
 export class ErrorHandlerInterceptor implements HttpInterceptor {
 
+  //error-handler interceptora slusha za greshki 
+
   constructor(private messageBus: MessageBusService) { }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(catchError(err => {
       this.messageBus.notifyForMessage({
-        text: err?.error?.message || 'Something went wrong!',
+        text: err?.error?.message || 'No error message but an error occured!',
         type: MessageType.Error
+        //parsvame syobshtenieto
       })
-      // Notify header.
+      
       return throwError(err);
+      // kazvam na headeara che ima greshka 
     }));
   }
 }

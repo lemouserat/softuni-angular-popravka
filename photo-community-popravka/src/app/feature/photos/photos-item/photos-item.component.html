@@ -9,7 +9,7 @@
           <div>
             <img src={{photo.photoUrl}} alt="">
             <p>EXIF: <span>{{photo.photoExif}}</span></p>
-            <p>Date: <time>{{photo.created_at | date: 'yyyy-MM-dd hh:mm:ss'}}</time></p>
+            <p>Date: <time>{{photo.created_at | date: 'short'}}</time></p>
             <div class="nick-name">
               <p>Author: <span>{{photo.userId.username}}</span></p>
             </div>

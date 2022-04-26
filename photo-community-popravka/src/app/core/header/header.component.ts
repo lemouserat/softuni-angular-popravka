@@ -1,11 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { AuthService } from 'src/app/auth.service';
 import { IUser } from '../interfaces';
 import { MessageBusService, MessageType } from '../message-bus.service';
-import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-header',
@@ -29,14 +27,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.messageBus.onNewMessage$.subscribe(newMessage => {
-      //console.log('onNewMessage$.subscribe', newMessage);
+      //notificirai me kogato ima novo syobshtenie
       this.message = newMessage?.text || '';
       this.isMessageError = newMessage?.type === MessageType.Error;
 
       if (this.message) {
         setTimeout(() => {
           this.messageBus.clear();
-        }, 5000);
+        }, 3000);
       }
     });
   }
@@ -49,20 +47,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if (this.isLoggingOut) {
       return;
     }
-
     this.isLoggingOut = true;
-    //console.log('logout called');
-
     this.authService.logout$().subscribe({
       next: args => {
-        //console.log(args);
+        //tuk poluchavam responsa i kogato e gotova cqlata zaqvka vliza v complete
       },
       complete: () => {
         this.isLoggingOut = false;
+        //taka steita si ostava
         this.router.navigate(['/home']);
       },
       error: () => {
         this.isLoggingOut = false;
+        //dori i pri error da zavyrshim logauta
       }
     });
   }

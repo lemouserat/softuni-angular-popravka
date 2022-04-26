@@ -20,9 +20,7 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       tap(event => {
         if (event instanceof HttpResponse) {
-          // localhost:3000/api/login || localhost:3000/register
           if (event.url.endsWith('login') || event.url.endsWith('register')) {
-            //console.log('login/register happened');
             const newlyLoggedUser: IUser = event.body;
             this.authService.handleLogin(newlyLoggedUser);
           } else if (event.url.endsWith('logout')) {
@@ -30,6 +28,7 @@ export class AuthInterceptor implements HttpInterceptor {
           }
         }
       },
+      //tapa izobshto ne se izvikva ako ima error
      ));
   }
 }
