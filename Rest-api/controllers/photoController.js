@@ -25,7 +25,7 @@ function getPhotosList(req, res, next){
 }
 
 function getTopPhotos(req, res, next){    
-    photoModel.find().sort({"subscribers": -1}).limit(6).populate('userId')
+    photoModel.find().sort({"subscribers": -1}).populate('userId')
     .then(photos => res.json(photos))
     .catch(next);
 
@@ -35,12 +35,7 @@ function getPhoto(req, res, next) {
     const { photoId } = req.params;
 
     photoModel.findById(photoId)
-        .populate({
-            path : 'posts',
-            populate : {
-              path : 'userId'
-            }
-          })
+        .populate('userId')
         .then(photo => res.json(photo))
         .catch(next);
 }

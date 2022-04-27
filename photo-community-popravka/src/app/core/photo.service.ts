@@ -26,11 +26,10 @@ export class PhotoService {
     return this.http.get<IPhoto[]>(`${apiUrl}/photos?title=${searchTerm}`, {})
   }
 
-  loadPhotoPaginatedList(searchTerm: string = '', startIndex: number, limit: number): Observable<PaginatedResponse<IPhoto>> {
+  loadPhotoPaginatedList(startIndex: number, limit: number): Observable<PaginatedResponse<IPhoto>> {
     return this.http.get<PaginatedResponse<IPhoto>>(`${apiUrl}/photos/list`, {
       params: new HttpParams({
         fromObject: {
-          title: searchTerm,
           startIndex,
           limit
         }

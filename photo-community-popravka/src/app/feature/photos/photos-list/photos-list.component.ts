@@ -28,19 +28,22 @@ export class PhotosListComponent implements OnInit, AfterViewInit {
     combineLatest([
       this.searchControl.valueChanges.pipe(
         debounceTime(300),
-        //filter(searchTerm => searchTerm.length > 3),
         startWith(''),
         tap(searchTerm => (console.log('searchTerm', searchTerm))
         )),
         this.pageChanges$
     ])
     .pipe(
-      switchMap(([searchTerm]) => this.photoService.loadPhotoPaginatedList(searchTerm, this.currentPage * this.pageSize, this.pageSize))
+      switchMap(([searchTerm]) => this.photoService.loadPhotoPaginatedList(this.currentPage * this.pageSize, this.pageSize))
     ) 
     .subscribe(photoList => {
       this.totalResults = photoList.totalResults;
       this.photoList = photoList.results;
     })
+
+    //this.photoService.loadPhotoList().subscribe(photoList => {
+    //  this.photoList = photoList
+    //})
   }
 
   goOnePageBack(): void {

@@ -1,8 +1,4 @@
-<form >
-    <input [formControl]="searchControl" type="text" placeholder="Search for posts">
-
-  </form>
-  
+ 
   <div *ngIf="photoList">
     <app-photos-item *ngFor="let photo of photoList" [photo]="photo"></app-photos-item>
     <div *ngIf="photoList.length === 0">No photos</div>

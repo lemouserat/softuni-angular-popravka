@@ -18,14 +18,14 @@ export class BazarListComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchControl.valueChanges.pipe(
-      debounceTime(300),
-      //filter(searchTerm => searchTerm.length > 3),
+      debounceTime(1000),
+      //filter(searchTerm => searchTerm.length >= 3),
       startWith(''),
-      tap(searchTerm => (console.log('searchTerm', searchTerm))),
       switchMap(searchTerm => this.offerService.loadOfferList(searchTerm))
+      //switchMap  ako vtoriq observable emitne nova stoinost stariq se unseubsribva
     ) .subscribe(offerList => {
       this.offerList = offerList
-      //console.log('This is offer list' + offerList + '....')
+      
     })
   }
 

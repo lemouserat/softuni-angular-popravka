@@ -11,7 +11,7 @@
             <p>Equipment type: <span>{{offer.cameraOrLens}}</span></p>
             <p>Contact: <span>{{offer.offerContact}}</span></p>
             <p>Description: <span>{{offer.offerDescription}}</span></p>
-            <p>Date: <time>{{offer.created_at | date: 'short'}}</time></p>
+            <p>Posted <time>{{offer.created_at | timeAgo}}</time> ago.</p>
             <div class="nick-name">
               <p>Author: <span>{{offer.userId.username}}</span></p>
             </div>
