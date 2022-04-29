@@ -5,13 +5,15 @@ import { TimeAgoPipe } from './time-ago.pipe';
 
 
 
+
 @NgModule({
   declarations: [
     WelcomeComponent,
     TimeAgoPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    
   ],
   exports: [
     WelcomeComponent,

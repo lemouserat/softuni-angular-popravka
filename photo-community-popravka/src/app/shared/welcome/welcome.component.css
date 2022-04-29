@@ -6,25 +6,31 @@
     border-radius: 0.3em;
     font-size: 0.8em;
     margin-top: 1em;
-    
 }
 
 .welcome h3 {
     background-color: rgb(13, 109, 104);
-    border-radius: 0.3em;
-    width: 98%;
+    width: 97%;
     padding: 0.3em 1em;
     color: white;
+    font-size: larger;
+}
+
+.welcome h4 {
+    font-weight:bolder;
+    font-size: larger;
+    padding: 0.3em 1em;
+    color: rgb(13, 109, 104);
+    border-bottom: 1px solid #999;
 }
 
 .welcome p {
-    padding: 1em;
-    border-bottom: 1px solid #999;
+
     font-style: normal;
-    
+    font-size: large;
 }
 
-.welcome a {
+.logged  a {
     color: white;
     text-decoration: none;
     background-color: #0f8063;
@@ -34,17 +40,25 @@
     margin: 1em;
 }
 
-.welcome a:hover {
+.logged  a:hover {
     cursor: pointer;
 }
 
-.welcome ul {
+.logged ul {
     display: flex;
     justify-content: space-evenly;
     padding: 0;
     margin: 1em;
 }
 
-.welcome li {
+.logged li {
     list-style: none;
+}
+
+.liAnim {
+    font-size: large;
+}
+
+img {
+    max-width: 1100px;
 }

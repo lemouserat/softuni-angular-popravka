@@ -17,6 +17,7 @@ import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { BazarModule } from './feature/bazar/bazar.module';
 import { OfferService } from './core/offer.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -34,6 +35,7 @@ import { OfferService } from './core/offer.service';
     PagesModule,
     AuthModule,
     BazarModule,
+    BrowserAnimationsModule,
     StoreModule.forRoot<IRootState>({
       counter: counterReducer,
       currentUser: currentUserReducer,

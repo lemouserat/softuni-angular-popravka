@@ -30,7 +30,6 @@ const routes: Routes = [
     },
     {
         path: 'offers',
-        canActivate: [AuthGuard],
         component: BazarPageComponent
     },
     {

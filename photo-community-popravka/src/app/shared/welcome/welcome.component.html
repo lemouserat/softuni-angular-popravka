@@ -1,7 +1,21 @@
 <div class="welcome">
-    <h3>Welcome!</h3>
-    <p>IN PROGRESS!!!</p>
-        <img src="https://kinkypotionportiondotcom.files.wordpress.com/2019/08/bass-sea-festival-2019-lemouserat-photography.jpg" alt="">
+    <h3>Welcome to Lemouserat's photo community!</h3>
+    <div @h4Anim>
+        <h4 class="hAnim">Are you a newbie photographer who wants to meet people of your own kind? You are now one step closer to becoming part of the newest and coolest web photo community. </h4>
+    </div>
+    <div @listAnim>
+        <p class="liAnim">Here you can:</p>
+        <ul>
+            <li class="liAnim">See some great photographs</li>
+            <li class="liAnim">Post your own images</li>
+            <li class="liAnim">Browse through our bazar</li>
+            <li class="liAnim">Post your own offers</li>
+            <li class="liAnim">Buy a new camera or lens</li>
+        </ul>
+    </div>
+</div> 
+        <img class="imAnim" src="https://scontent.fsof10-1.fna.fbcdn.net/v/t31.18172-8/24210502_2042406746043369_971718359449913991_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=cdbe9c&_nc_ohc=qdK9AIvFrN8AX9M-_Hv&_nc_ht=scontent.fsof10-1.fna&oh=00_AT_D13EUEtwrnPwJ_1fKGDwYfz5147HW7gknheVnHmOxbg&oe=62928F39" alt="">
+    
     <div class="logged" >
         <div *ngIf="!(isLoggedIn$ | async)" class="container">
             <ul>
@@ -23,4 +37,4 @@
         </div>
 
     </div>
-</div>   
+  
