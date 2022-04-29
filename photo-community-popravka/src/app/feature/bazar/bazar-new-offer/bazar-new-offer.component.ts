@@ -4,6 +4,7 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { OfferService } from 'src/app/core/offer.service';
 
+
 @Component({
   selector: 'app-bazar-new-offer',
   templateUrl: './bazar-new-offer.component.html',
@@ -12,19 +13,18 @@ import { OfferService } from 'src/app/core/offer.service';
 export class BazarNewOfferComponent implements OnInit {
 
   offerPhoto?: File 
-
   
   handleOfferPhotoUpload(event: InputEvent){
     const input: HTMLInputElement = event.target as HTMLInputElement;
     this.offerPhoto = input.files[0]
     console.log( "this.offerPhoto" + this.offerPhoto)
-  }
+}
 
   addOfferForm: FormGroup = new FormGroup({
     offerName: new FormControl(''),
     buyOrSell: new FormControl(''),
     cameraOrLens: new FormControl(''),
-    offerPhoto: new FormControl(''),
+    offerPhoto: new FormControl(File),
     offerDescription: new FormControl(''),
     offerContact: new FormControl(''),
   })

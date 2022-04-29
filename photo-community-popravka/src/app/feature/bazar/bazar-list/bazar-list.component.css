@@ -1,0 +1,20 @@
+.offer-list {
+    display: grid;
+    grid-template-columns: 400px 400px 400px 400px; 
+    margin: 10px;
+    padding: 10px
+}
+
+form p{
+    display: inline;
+    margin-right: 20px;
+    margin-left: 40px;
+    font-size: larger;
+}
+
+form {
+   background-color: rgb(101, 143, 139);
+   margin: 10px;
+   display: flex;
+   align-items: center
+}

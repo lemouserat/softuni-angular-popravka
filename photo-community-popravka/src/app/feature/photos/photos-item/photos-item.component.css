@@ -27,7 +27,7 @@ img {
   margin: 0;
 }
 
-.theme-name-wrapper {
+.photo-name-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,11 +38,11 @@ img {
   margin-top: 1em;
 }
 
-.theme-title {
+.photo-title {
   padding: 0;
 }
 
-.theme-name {
+.photo-name {
   width: 100%;
 }
 

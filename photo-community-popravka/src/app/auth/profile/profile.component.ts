@@ -30,7 +30,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.dispatch(profilePageInitalized());
-
     this.hasErrorHappened.subscribe((hasError) => {
       if (hasError) {
         this.router.navigate(['/user/login'])

@@ -6,8 +6,7 @@
   <div *ngIf="!photoList">
     Loading...
   </div>
-  <div>
-    <button [disabled]="currentPage === 0" (click)="goOnePageBack()">Previous page</button>
-    Showing {{currentPage * pageSize}}-{{(currentPage+1)}} of {{totalResults}} results.
-    <button [disabled]="(currentPage + 1) * pageSize >= totalResults" (click)="goOnePageForward()">Next page</button>
-  </div>
+  
+    <button  class="pagination-left" [disabled]="currentPage === 0" (click)="goOnePageBack()">Previous page</button>
+
+    <button class="pagination-right" [disabled]="(currentPage + 1) * pageSize >= totalResults" (click)="goOnePageForward()">Next page</button>

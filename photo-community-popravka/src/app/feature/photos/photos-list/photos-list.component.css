@@ -4,3 +4,17 @@ div {
       margin: 10px;
       padding: 10px
 }
+
+.pagination-right {
+      float: right;
+      display: inline;
+      width: 20%;
+      margin-right: 40px;
+}
+
+.pagination-left {
+      float: left;
+      display: inline;
+      width: 20%;
+      margin-left: 40px;
+}

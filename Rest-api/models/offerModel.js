@@ -16,6 +16,7 @@ const offerSchema = new mongoose.Schema({
     },
     offerPhoto: {
         type: String,
+        required: false
 
     },
     offerDescription: {

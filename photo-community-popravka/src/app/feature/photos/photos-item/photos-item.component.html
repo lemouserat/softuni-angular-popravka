@@ -1,6 +1,6 @@
 <div class="photo-container">
-    <div class="theme-name-wrapper">
-      <div class="theme-name">
+    <div class="photo-name-wrapper">
+      <div class="photo-name">
         <a [routerLink]="['/photos', photo._id]" class="normal">
           <h2 *ngIf="photo.photoTitle.length > 25">{{(photo.photoTitle | slice:0:25) + '...' }}</h2>
           <h2 *ngIf="photo.photoTitle.length <= 25">{{photo.photoTitle}}</h2>
@@ -19,6 +19,6 @@
           </div>
         </div>
       </div>
-      <!-- <app-post-list [themeId]="theme._id"></app-post-list> -->
+
     </div>
   </div>

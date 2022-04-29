@@ -8,6 +8,7 @@ import { BazarNewOfferComponent } from './bazar-new-offer/bazar-new-offer.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { BazarRoutingModule } from './bazar-routing.module';
+import { FileFormControlModule } from 'file-form-control-angular';
 
 
 
@@ -17,14 +18,16 @@ import { BazarRoutingModule } from './bazar-routing.module';
     BazarListComponent,
     BazarItemComponent,
     BazarItemDetailsComponent,
-    BazarNewOfferComponent
+    BazarNewOfferComponent,
+    
   ],
   imports: [
     CommonModule,
     SharedModule,
     BazarRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FileFormControlModule
   ]
 })
 export class BazarModule { }

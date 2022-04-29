@@ -44,7 +44,9 @@
         </div>
         <div class="new-photo-genre">
             <label for="offerPhoto">Upload photo:<span class="red">*</span></label>
-            <input #offerPhoto="ngModel" ngModel type="file" name="offerPhoto" accept="image/png" id="offerPhoto" (change)="handleOfferPhotoUpload($event)">
+            <input  type="file"  #offerPhoto="ngModel" ngModel
+            name="offerPhoto" accept="image/png" id="offerPhoto" (change)="handleOfferPhotoUpload($event)">
+           
         </div>
         
 
@@ -63,7 +65,7 @@
             <textarea type="text" name="offerDescription" #offerDescription="ngModel" ngModel id="offerDescription" rows="5" class="height" ></textarea>
         </div>
 
-        <div class="new-theme-buttons">
+        <div class="new-photo-buttons">
             <button type="button"  class="cancel"  onchange="console.log(event.target.files)" (click)="navigateToHome()">Cancel</button>
             <button  class="public">Publish</button>
         </div>

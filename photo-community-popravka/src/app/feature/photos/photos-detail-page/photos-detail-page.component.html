@@ -1,8 +1,8 @@
-<div *ngIf="!!photo; else loadingIndicator" class="theme-content">
-    <!-- theme-title  -->
-    <div class="theme-title">
-        <div class="theme-name-wrapper">
-            <div class="theme-name">
+<div *ngIf="!!photo; else loadingIndicator" class="photo-content">
+    
+    <div class="photo-title">
+        <div class="photo-name-wrapper">
+            <div class="photo-name">
                 <h2>{{ photo.photoTitle}}</h2>
                 <img src="{{photo.photoUrl}}" alt="">
                 <p>Genre: <span>{{photo.photoGenre}}</span></p>
@@ -52,7 +52,6 @@
 
 </div>
 
-<!-- <a routerLink="/themes/5fa64a9f2183ce1728ff371a">Angular 10</a> -->
 
 <ng-template #loadingIndicator>
     Loading...

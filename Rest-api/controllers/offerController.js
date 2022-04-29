@@ -29,7 +29,7 @@ function createOffer(req, res, next) {
     const { offerName, buyOrSell, cameraOrLens, offerDescription, offerPhoto, offerContact } = req.body;
     const { _id: userId } = req.user;
 
-    //const offerPhoto = req.files.offerPhoto;
+    //const offerPhoto$ = req.body.offerPhoto;
     if(offerPhoto){
         uploadFile(offerPhoto).then(id => {
             console.log(`This is the id ${id}`)
@@ -44,10 +44,6 @@ function createOffer(req, res, next) {
         .then(offer =>  res.json(offer))
         .catch(next);
     }
-
-
-
-
 }
 
 function subscribe(req, res, next) {

@@ -1,6 +1,6 @@
 <div class="photo-container">
-    <div class="theme-name-wrapper">
-      <div class="theme-name">
+    <div class="photo-name-wrapper">
+      <div class="photo-name">
         <a [routerLink]="['/offers', offer._id]"  class="normal">
           <h2 *ngIf="offer.offerName.length > 30">{{(offer.offerName | slice:0:30) + '...' }}</h2>
           <h2 *ngIf="offer.offerName.length <= 30">{{offer.offerName}}</h2>

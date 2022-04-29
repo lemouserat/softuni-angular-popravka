@@ -22,6 +22,7 @@
     "@ngrx/effects": "^13.1.0",
     "@ngrx/store": "^13.1.0",
     "@ngrx/store-devtools": "^13.1.0",
+    "file-form-control-angular": "^0.0.2",
     "ngrx": "^0.0.1-security",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

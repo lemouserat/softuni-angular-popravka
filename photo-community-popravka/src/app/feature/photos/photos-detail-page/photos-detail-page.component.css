@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-.theme-content {
+.photo-content {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -13,7 +13,7 @@ img {
     max-width: 800px;
 }
 
-.theme-name-wrapper {
+.photo-name-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,11 +24,11 @@ img {
     margin-top: 1em;
 }
 
-.theme-title {
+.photo-title {
     padding: 0;
 }
 
-.theme-name {
+.photo-name {
     width: 100%;
 }
 
@@ -60,19 +60,19 @@ img {
     background-color: red;
 }
 
-.theme-title {
+.photo-title {
     width: 100%;
 }
 
-.theme-name-wrapper .subscribers p {
+.photo-name-wrapper .subscribers p {
     text-align: right;
 }
 
-.theme-name {
+.photo-name {
     margin-right: 1em;
 }
 
-.theme-name h2 {
+.photo-name h2 {
     padding-top: 0;
 }
 

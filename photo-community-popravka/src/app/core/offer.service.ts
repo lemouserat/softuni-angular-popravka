@@ -12,7 +12,7 @@ export class OfferService {
   constructor(private http: HttpClient) { }
 
   addOffer$(body: { offerName: string, buyOrSell: string, 
-    cameraOrLens: string, offerPhoto: File, offerDescription: string, offerContact: string }): Observable<IOffer> {
+    cameraOrLens: string, offerPhoto: string, offerDescription: string, offerContact: string }): Observable<IOffer> {
     console.log('this is body' + body)
 
     return this.http.post<IOffer>(`${apiUrl}/offers`, body, { withCredentials: true });

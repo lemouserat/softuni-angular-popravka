@@ -2,9 +2,9 @@
     <div *ngIf="!(isLoggedIn$ | async)" class="container">
         <app-welcome></app-welcome>
     </div>
+    <div class="top-rated">
+        <p>See our top rated photos:</p>
+    </div>
     <app-photos-top-list></app-photos-top-list>
 </main>
 
-<aside>
-    
-</aside>

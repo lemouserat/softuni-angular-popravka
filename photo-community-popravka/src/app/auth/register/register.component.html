@@ -5,7 +5,7 @@
 
         <!-- username -->
         <p class="field field-icon">
-            <label for="username"><span><i class="fas fa-user"></i></span></label>
+            <label for="username"><span>Username:  </span></label>
             <input formControlName="username"
                 [class.input-error]="registerFormGroup.controls['username'].touched && registerFormGroup.controls['username'].invalid"
                 type="text" name="username" id="username" placeholder="Johny">
@@ -26,7 +26,7 @@
 
         <!-- email -->
         <p class="field field-icon">
-            <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+            <label for="email"><span>Email: </span></label>
             <input formControlName="email" type="email" name="email" id="email" placeholder="john.doe@gmail.com"
                 [class.input-error]="shouldShowErrorForControl('email')">
         </p>
@@ -45,7 +45,7 @@
 
         <div formGroupName="passwords">
             <p class="field field-icon">
-                <label for="password"><span><i class="fas fa-lock"></i></span></label>
+                <label for="password"><span>Password: </span></label>
                 <input [class.input-error]="shouldShowErrorForControl('password', passwordsGroup)" formControlName="password" type="password" name="password" id="password" placeholder="******">
             </p>
             
@@ -61,7 +61,7 @@
 
             <!-- rePassword -->
             <p class="field field-icon">
-                <label for="rePassword"><span><i class="fas fa-lock"></i></span></label>
+                <label for="rePassword"><span>Repeat password: </span></label>
                 <input formControlName="rePassword" type="password" name="rePassword" id="rePassword"
                     placeholder="******">
             </p>
