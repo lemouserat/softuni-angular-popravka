@@ -44,7 +44,8 @@ export class ProfileComponent implements OnInit {
       this.editProfileForm.form.patchValue({
         email: currentUser.email,
         username: currentUser.username,
-        password: currentUser.password
+        password: currentUser.password,
+        equipment: currentUser.equipment
       })
     });
   }
@@ -54,7 +55,8 @@ export class ProfileComponent implements OnInit {
       user: {
         username: this.editProfileForm.value.username,
         email: this.editProfileForm.value.email,
-        profilePicture: this.newProfilePicture
+        profilePicture: this.newProfilePicture,
+        equipment: this.editProfileForm.value.equipment
       }
       
     }));

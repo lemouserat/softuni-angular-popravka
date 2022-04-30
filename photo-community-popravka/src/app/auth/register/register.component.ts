@@ -44,7 +44,7 @@ export class RegisterComponent implements OnInit {
       username: username,
       email: email,
       password: passwords.password,
-      // ...(tel && { tel: telRegion + tel})
+    
     }
 
 

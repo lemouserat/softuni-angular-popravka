@@ -10,6 +10,10 @@
                 <p>Email: </p>
                 <p>{{currentUser.email}}</p>
             </div>
+            <div class="flex">
+                <p>Equipment: </p>
+                <p>{{currentUser.equipment}}</p>
+            </div>
            
             <button (click)="enterEditMode(currentUser)" class="edit-button">Edit</button>
         </ng-container>
@@ -23,6 +27,10 @@
                 <div class="flex">
                     <p>Email: </p>
                     <input #email="ngModel" [class.input-error]="email.touched && email.invalid" type="email" name="email" id="email" ngModel required emailValidator value="john.doe@gmail.com">
+                </div>
+                <div class="flex">
+                    <p>Equipment: </p>
+                    <input #equipment="ngModel" type="equipment" name="equipment" id="equipment" ngModel >
                 </div>
                 <div class="flex">
                     <p>Profile picture: </p>

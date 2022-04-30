@@ -4,11 +4,11 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IUser } from './interfaces';
 
-export interface IUpdateUserDto extends Pick<IUser, 'username' | 'email'> {
+export interface IUpdateUserDto extends Pick<IUser, 'username' | 'email' | 'equipment'> {
   profilePicture?: File
 }
 
-export interface CreateUserDto { username: string, email: string, password: string }
+export interface CreateUserDto { username: string, email: string, password: string}
 
 @Injectable()
 export class UserService {
@@ -24,6 +24,7 @@ export class UserService {
     const formData = new FormData();
     formData.set('username', newUser.username)
     formData.set('email', newUser.email)
+    formData.set('equipment', newUser.equipment)
 
     if(newUser.profilePicture){
       formData.append('profilePicture', newUser.profilePicture)
