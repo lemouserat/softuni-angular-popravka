@@ -44,6 +44,7 @@ export class ProfileComponent implements OnInit {
       this.editProfileForm.form.patchValue({
         email: currentUser.email,
         username: currentUser.username,
+        password: currentUser.password
       })
     });
   }

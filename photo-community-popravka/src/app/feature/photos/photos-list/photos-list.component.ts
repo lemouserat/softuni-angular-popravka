@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { BehaviorSubject, combineLatest } from 'rxjs';
-import { debounceTime, filter, startWith, switchMap, tap } from 'rxjs/operators';
+import { debounceTime, startWith, switchMap, tap } from 'rxjs/operators';
 import { IPhoto } from 'src/app/core/interfaces/photo';
 import { PhotoService } from 'src/app/core/photo.service';
 

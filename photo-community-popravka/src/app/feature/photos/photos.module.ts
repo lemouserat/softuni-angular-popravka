@@ -12,6 +12,8 @@ import { UserService } from 'src/app/core/user.service';
 import { AuthModule } from 'src/app/auth/auth.module';
 import { PhotosTopPageComponent } from './photos-top-page/photos-top-page.component';
 import { PhotosTopListComponent } from './photos-top-list/photos-top-list.component';
+import { AuthService } from 'src/app/auth.service';
+import { ProfileComponent } from 'src/app/auth/profile/profile.component';
 
 
 

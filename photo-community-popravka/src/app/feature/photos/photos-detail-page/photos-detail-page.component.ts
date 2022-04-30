@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { combineLatest, Observable } from 'rxjs';
 import { mergeMap, tap } from 'rxjs/operators';
@@ -45,14 +45,10 @@ export class PhotosDetailPageComponent implements OnInit {
         this.photo = photo;
         this.canSubscribe = user && !this.photo.subscribers.includes(user?._id)
         this.isUserOwner = user && this.photo.userId === user._id
-
-
       })
+      console.log(this.isUserOwner)
   }
 
-  getUsernameFromPhoto(photo){
-    
-  }
 
   canLike(comment: IPost){
     return this.currentUser && !comment.likes.includes(this.currentUser._id)
@@ -87,7 +83,6 @@ export class PhotosDetailPageComponent implements OnInit {
   }
 
   deletePhoto(){
-    //console.log('this is the photo id' + this.photo._id);
     this.photoService.deletePhotoItem(this.photo._id).subscribe({
       next: (photo) => {
         this.router.navigate(['/photos'])

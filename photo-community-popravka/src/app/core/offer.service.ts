@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { IOffer, IPost } from './interfaces';
+import { IOffer, IPost, IUser } from './interfaces';
 
 const apiUrl = environment.apiUrl;
 
@@ -25,4 +25,6 @@ export class OfferService {
   loadOfferList(searchTerm: string = ''): Observable<IOffer[]> {
     return this.http.get<IOffer[]>(`${apiUrl}/offers?title=${searchTerm}`, {})
   }
+
+
 }

@@ -9,15 +9,10 @@
           <div>
             <p>Offer type: <span>{{offer.buyOrSell}}</span></p>
             <p>Equipment type: <span>{{offer.cameraOrLens}}</span></p>
-            <p>Contact: <span>{{offer.offerContact}}</span></p>
-            <p>Description: <span>{{offer.offerDescription}}</span></p>
             <p>Posted <time>{{offer.created_at | timeAgo}}</time> ago.</p>
             <div class="nick-name">
               <p>Author: <span>{{offer.userId.username}}</span></p>
             </div>
-          </div>
-          <div class="subscribers">
-            <p class="votes">Interested: <span>{{offer.interested.length}}</span></p>
           </div>
         </div>
       </div>

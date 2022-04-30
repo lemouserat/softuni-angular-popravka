@@ -12,8 +12,7 @@ import { IPhoto } from 'src/app/core/interfaces/photo';
 export class PhotosItemComponent implements OnChanges {
 
   isLoggedIn$: Observable<boolean> = this.authService.isLoggedIn$;
-  //canSubscribe: boolean = false;
-  canSubscribe$: Observable<boolean>
+   canSubscribe$: Observable<boolean>
 
   @Input() photo: IPhoto
 

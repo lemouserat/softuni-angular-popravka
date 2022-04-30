@@ -17,3 +17,10 @@
   margin: auto;
   padding: 15px;
 }
+
+:host {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+}

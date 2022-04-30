@@ -4,16 +4,26 @@
         <div class="photo-name-wrapper">
             <div class="photo-name">
                 <h2>{{ offer.offerName}}</h2>
+                <ng-container *ngIf="offer.cameraOrLens == 'Camera' ">
+                    <img src="https://m.media-amazon.com/images/I/914hFeTU2-L._SL1500_.jpg" alt="">
+                </ng-container>
+
+                <ng-container *ngIf="offer.cameraOrLens == 'Lens' ">
+                    <img src="https://www.travelanddestinations.com/wp-content/uploads/2018/05/Camera-lenses-CC0-Pixabay.jpg" alt="">
+                </ng-container>
+
+                <ng-container *ngIf="offer.cameraOrLens == 'Acccesories' ">
+                    <img src="https://cdn-7.nikon-cdn.com///cdn-7.nikon-cdn.com/Images/CPCAssets/category-landing-pages/img/accessories/category-mirrorless.jpg" alt="">
+                </ng-container>
+
                 <p>Offer type: <span>{{offer.buyOrSell}}</span></p>
                 <p>Equipment type: <span>{{offer.cameraOrLens}}</span></p>
-                <img [src]="(offer.offerPhoto || '/assets/profile.png')" alt="default user">
-                <p>Contact: <span>{{offer.offerContact}}</span></p>
                 <p>Description: <span>{{offer.offerDescription}}</span></p>
                 <p>Posted <time> {{offer.created_at | timeAgo}}</time> ago.</p>
-                <p>Author: <span>{{offer.userId}}</span></p>
+                <p>Contact: <span>{{offer.offerContact}}</span></p>
+
             </div>
             <div class="subscribers">
-                <p>Interested: <span>{{offer.interested.length}}</span></p>
                 <ng-container *ngIf="(isLoggedIn$ | async)">
 
                 </ng-container>

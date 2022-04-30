@@ -89,3 +89,9 @@ p.error {
 .input-error {
     border-left-color: red;
 }
+
+.contact {
+    margin: 0px;
+    padding: 0px;
+    color: #105f55;
+}

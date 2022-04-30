@@ -16,8 +16,8 @@ export class BazarItemDetailsComponent implements OnInit {
 
   offer: IOffer<IPost>
 
-  canSubscribe: boolean = false
   currentUser?: IUser
+  isUserOwner: boolean = false
   isLoggedIn$: Observable<boolean> = this.authService.isLoggedIn$;
 
   constructor(private activatedRoute: ActivatedRoute,
@@ -38,15 +38,15 @@ export class BazarItemDetailsComponent implements OnInit {
               this.currentUser = this.currentUser))
       ])
   .subscribe(([offer, user]) => {
-          this.offer = offer;
-          this.canSubscribe = user && !this.offer.interested.includes(user?._id)
-          //console.log('try user ' + offer)
-          //console.log('try photo ' + offer.userId.username)
-          //console.log('try photo ' + offer.userId.username)
-          //console.log('try photo ' + this.offer.userId.username)
+          this.currentUser = user
+          this.offer = offer
+
+
   
         })
     }
+
+
 
 
 

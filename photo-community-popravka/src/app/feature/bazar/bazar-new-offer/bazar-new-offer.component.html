@@ -4,15 +4,15 @@
     </div>
     <form #addOfferForm="ngForm" (ngSubmit)="submitNewOffer(addOfferForm)">
         <div class="new-photo-title">
-            <label for="offerName">Offer title:<span class="red">*</span></label>
+            <label for="offerName">Offer short description:<span class="red">*</span></label>
             <input #offerName="ngModel" ngModel type="text" name="offerName" id="offerName" required minlength="5">
 
             <ng-container *ngIf="offerName.touched && offerName.invalid" >
                 <p *ngIf="offerName.errors.required" class="error">
-                    Photo title is required.
+                    Offer short description is required.
                 </p>
                 <p *ngIf="offerName.errors.minlength" class="error">
-                    Photo title must be at least 5 characters long.
+                    Offer short description must be at least 5 characters long.
                 </p>
             </ng-container>
 
@@ -25,7 +25,7 @@
             </select>
             <ng-container *ngIf="buyOrSell.touched && buyOrSell.invalid">
                 <p *ngIf="buyOrSell.errors.required" class="error">
-                    Photo genre is required.
+                    Please state whether you are buyng or selling.
                 </p>
             </ng-container>
         </div>
@@ -38,30 +38,23 @@
             </select>
             <ng-container *ngIf="cameraOrLens.touched && cameraOrLens.invalid">
                 <p *ngIf="cameraOrLens.errors.required" class="error">
-                    Photo genre is required.
+                    Please state whether you mean a camera, lens or accesories.
                 </p>
             </ng-container>
-        </div>
-        <div class="new-photo-genre">
-            <label for="offerPhoto">Upload photo:<span class="red">*</span></label>
-            <input  type="file"  #offerPhoto="ngModel" ngModel
-            name="offerPhoto" accept="image/png" id="offerPhoto" (change)="handleOfferPhotoUpload($event)">
-           
-        </div>
-        
+        </div>      
 
         <div class="new-photo-url">
             <label for="offerContact">Contact:<span class="red">*</span></label>
             <input #offerContact="ngModel"  ngModel type="text" name="offerContact" id="offerContact" required minlength="5">
-
+            <p class="contact">As contact you can leave your phone, email or social media account.</p>
             <ng-container *ngIf="offerContact.touched && offerContact.invalid">
                 <p *ngIf="offerContact.errors.required" class="error">
-                    Photo URL is required.
+                    Contact is required to get leads. 
                 </p>
             </ng-container>
         </div>
         <div class="new-photo-exif">
-            <label for="offerDescription">Description:<span class="red"></span></label>
+            <label for="offerDescription">Long description:<span class="red"></span></label>
             <textarea type="text" name="offerDescription" #offerDescription="ngModel" ngModel id="offerDescription" rows="5" class="height" ></textarea>
         </div>
 
