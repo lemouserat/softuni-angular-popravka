@@ -10,19 +10,7 @@
                 <p>Email: </p>
                 <p>{{currentUser.email}}</p>
             </div>
-            <div class="flex">
-                <p>Photos: </p>
-                <p>{{currentUser.photos[0].photoTitle}}</p>
-            </div>
-            <div class="flex">
-                <p>Offers: </p>
-                <p>{{currentUser.offers}}</p>
-            </div>
-            <div class="flex">
-                <p>Password: </p>
-                <p>{{currentUser.password}}</p>
-            </div>
-            
+           
             <button (click)="enterEditMode(currentUser)" class="edit-button">Edit</button>
         </ng-container>
 
